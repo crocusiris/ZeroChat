@@ -162,14 +162,14 @@ async def root():
 
 
 def source_url():
-    return os.environ.get("ZEROCHAT_SOURCE_URL", "https://github.com/sh1nny0u/ZeroChat/tree/V2.0.0.261112")
+    return os.environ.get("ZEROCHAT_SOURCE_URL", "https://github.com/crocusiris/ZeroChat")
 
 
 @app.get("/api/license")
 async def license_information():
     return {"version": "2.0.0", "license": "AGPL-3.0-only", "source_url": source_url(),
             "license_url": "https://www.gnu.org/licenses/agpl-3.0.html",
-            "notice": "No warranty. Original MIT copyright and permission notices are retained."}
+            "notice": "Copyright (c) 2026 yangchun <liyoungchun@163.com>. No warranty."}
 
 @app.get("/api/health")
 async def health():

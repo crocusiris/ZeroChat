@@ -13,7 +13,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions { jvmTarget = JavaVersion.VERSION_17.toString() }
     defaultConfig {
         applicationId = "com.zerochat.zerochat"
         manifestPlaceholders["appLabel"] = "ZeroChat"
@@ -38,6 +37,11 @@ android {
         throw GradleException("正式构建必须配置独立发布密钥及签名环境变量")
     }
     buildTypes { release { signingConfig = signingConfigs.findByName("production") } }
+}
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+    }
 }
 flutter { source = "../.." }
 dependencies { coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4") }

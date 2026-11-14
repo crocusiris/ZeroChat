@@ -23,8 +23,8 @@ def package(destination, source=SERVER_DIR):
     if any(path.is_symlink() or not path.resolve().is_relative_to(source) for path in selected):
         raise ValueError("发布源文件含链接或路径越界，未生成发布包")
     contents = {path.relative_to(source).as_posix(): path.read_bytes() for path in selected}
-    # Public packages retain both the current license and upstream permissions.
-    for name in ("LICENSE", "NOTICE", "licenses/MIT-original.txt"):
+    # Public packages include the project license and author notice.
+    for name in ("LICENSE", "NOTICE"):
         candidates = (source / name, source.parent / name)
         license_file = next((p for p in candidates if p.is_file()), None)
         if license_file is None or license_file.is_symlink():

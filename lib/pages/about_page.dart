@@ -33,16 +33,20 @@ class AboutPage extends StatelessWidget {
           title: Text('ZeroChat'),
           subtitle: Text('2.0.0 · 自托管 AI 聊天伴侣'),
         ),
+        const ListTile(
+          title: Text('作者'),
+          subtitle: SelectableText('yangchun · liyoungchun@163.com'),
+        ),
         const Divider(height: 1),
         const ListTile(
           title: Text('对应版本源代码'),
           subtitle: SelectableText(
-            'https://github.com/sh1nny0u/ZeroChat/tree/V2.0.0.261112',
+            'https://github.com/crocusiris/ZeroChat',
           ),
         ),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
-          child: Text('本软件按 AGPL-3.0-only 提供，不作任何担保。原 MIT 代码的授权声明保留。'),
+          child: Text('本软件按 AGPL-3.0-only 提供，不作任何担保。'),
         ),
         ListTile(
           title: const Text('AGPL 3.0 许可证'),
@@ -53,12 +57,6 @@ class AboutPage extends StatelessWidget {
           title: const Text('版权与来源声明'),
           trailing: const Icon(Icons.chevron_right),
           onTap: () => _license(context, 'NOTICE', '版权与来源'),
-        ),
-        ListTile(
-          title: const Text('原 MIT 授权'),
-          trailing: const Icon(Icons.chevron_right),
-          onTap: () =>
-              _license(context, 'licenses/MIT-original.txt', '原 MIT 授权'),
         ),
         ListTile(
           title: const Text('第三方开源许可'),

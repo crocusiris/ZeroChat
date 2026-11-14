@@ -7,7 +7,9 @@
 ![Version](https://img.shields.io/badge/Version-2.0.0-07C160)
 ![License](https://img.shields.io/badge/License-AGPL--3.0-blue)
 
-当前应用版本 **2.0.0**，发布标签 **V2.0.0.261112**。新版客户端和后端需配套升级。完整变更见 [CHANGELOG](CHANGELOG.md)。
+当前应用版本 **2.0.0**。客户端和后端需配套使用。版本说明见 [CHANGELOG](CHANGELOG.md)。
+
+作者：**yangchun** · 邮箱：**liyoungchun@163.com** · [GitHub 仓库](https://github.com/crocusiris/ZeroChat)
 
 ## ✨ 功能
 
@@ -26,15 +28,15 @@
 | 数据保护 | 业务备份、下载与保护性恢复，旧数据迁移报告、私有资源鉴权、脱敏分类日志 |
 | 提醒 | 单聊/群聊未读及可选 Android 后台接收；受系统省电和运行时限约束 |
 
-## 🆕 相比 1.0.2 的主要变化
+## 🆕 核心能力
 
-- 从客户端分散调用迁移为带管理员鉴权的统一后端，增加设备长期会话与撤销。
+- 带管理员鉴权的统一后端，支持设备长期会话与撤销。
 - 增加全局/角色 API、独立意图和视觉配置、供应商地址快捷选择、豆包 TTS 与语音消息。
 - 增加本地混合记忆管理、自主行为预算、人设好友码、服务器同步与完整业务备份。
 - 修复角色设置串号风险、跨重启资源缓存、历史全量加载、短期上下文身份与顺序问题。
 - 修复发送后输入残留、失败原文丢失、供应商回显为空、未知请求无法手动恢复及聊天时间偏差。
 - 统一 Windows 虚拟环境启动，首次按 requirements 安装依赖，Python 由用户自行安装。
-- 当前版本整体使用 AGPL-3.0-only，保留原 MIT 版权与授权声明。
+- 本项目使用 AGPL-3.0-only。
 
 ## 🚀 快速部署
 
@@ -103,7 +105,6 @@ flutter run
 lib/             Flutter 页面、模型、服务与组件
 android/         Android 配置、资源与原生桥接
 server/          后端入口、路由、服务和运维工具
-licenses/        原项目授权声明
 ```
 
 ## 📌 使用边界
@@ -135,10 +136,10 @@ licenses/        原项目授权声明
 
 ## 🤝 贡献与反馈
 
-欢迎通过原仓库 Issue 与 Pull Request 提交可复现问题。请先脱敏，勿上传账号、密钥、聊天、人设私密附件、备份、日志或本机路径。
+欢迎通过 [GitHub 仓库](https://github.com/crocusiris/ZeroChat) 的 Issue 与 Pull Request 提交可复现问题。请先脱敏，勿上传账号、密钥、聊天、人设私密附件、备份、日志或本机路径。
 
 
 ## 📄 许可证
 
-当前版本整体按 **GNU Affero General Public License v3.0 only（AGPL-3.0-only）** 发布，完整文本见 [LICENSE](LICENSE)，来源与声明见 [NOTICE](NOTICE)。原 MIT 代码的版权与授权保留于 [licenses/MIT-original.txt](licenses/MIT-original.txt)，不撤销先前 MIT 版本已有授权。
+本项目按 **GNU Affero General Public License v3.0 only（AGPL-3.0-only）** 发布，完整文本见 [LICENSE](LICENSE)，作者与来源声明见 [NOTICE](NOTICE)。
 
